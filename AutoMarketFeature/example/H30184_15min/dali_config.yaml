@@ -1,0 +1,42 @@
+
+mongodb:
+    host: 47.116.14.236
+    port: 27017
+    user: admin
+    passwd: admin123
+    db_name: H30184_15min
+    db_collection: ['portfolio'] #['layer1', 'layer2', 'layer3']
+    query: {'backtest':'Undo'} #, 'Analyzer': 'Undo'}
+
+
+queue:
+    host: 47.116.14.236
+    port: 5001
+    queue_size: 5000
+    queue_threshold: 0
+
+
+
+kitkit:
+    resample_start: '2019-07-15'
+    resample_end: '2019-12-01'
+    data_path: ~/TradeWorks/Tank/data/H30184_15min/
+    lookback: 200
+    commission: 0.0015
+    cycle: 15MIN
+    quintiles_num: 10
+    complete_mark: {'backtest': 'Done'}
+    update_mongodb: True
+    output_dir: #/pub/TradeWorks/H30184_15min/
+
+# dali:
+#     init_cash: 10000000
+#     lookback: 200
+#     start_date: '2019-08-01 10:45:00'
+#     end_date: '2019-12-01 14:15:00'
+#     data_path: ~/TradeWorks/Tank/data/H30184_15min/
+#     output_dir: ~/TradeWorks/Auto/output/H30184_15min/
+
+
+pool:
+    processes_num: 1
