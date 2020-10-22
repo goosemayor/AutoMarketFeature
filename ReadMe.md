@@ -11,7 +11,7 @@ Its features include:
 - Control the probability of the occurrence of each element
 - Connect with DataBase
 
-## Conceptions:
+## Concepts:
 
 elements: price and volume, e.g. close, open, low, high, volume e.g.
 
