@@ -7,7 +7,7 @@ AutoMarketFeature(AMF)  aims to speedily generate a portfolio of characteristics
 Its features include:
 
 - Generate features by batch combinations
-- Specifically select element
+- Specifically select elements
 - Control the probability of the occurrence of each element
 - Connect with DataBase
 
@@ -41,3 +41,18 @@ eg.get_one_expr(layer_num=1)
  'layer': 1,
   'create_date': '2020-10-22 14:38:49'}
 ```
+
+```python
+eg.get_one_expr(layer_num=2)
+```
+
+```python
+[ExprGenerator] layer:2 expr:stddev(delta2(VolChg,60,100),200)
+{'expr': 'stddev(delta2(VolChg,60,100),200)',
+ 'layer': 2,
+ 'create_date': '2020-10-22 14:45:37'}
+ ```
+
+generate more:
+![image_01](https://github.com/goosemayor/AutoMarketFeature/blob/main/image_01.png)
+
