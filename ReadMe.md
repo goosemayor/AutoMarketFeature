@@ -1,4 +1,6 @@
-![Screen Shot 2020-10-21 at 11.52.17 AM](Screen Shot 2020-10-21 at 11.52.17 AM-3252454-20201021121440812.png)
+
+![Screen Shot 2020-10-21 at 11.52.17 AM](https://github.com/goosemayor/AutoMarketFeature/blob/main/Screen%20Shot%202020-10-21%20at%2011.52.17%20AM-3252454.png)
+
 
 AutoMarketFeature(AMF)  aims to speedily generate a portfolio of characteristics based on price and volume in the market.
 
