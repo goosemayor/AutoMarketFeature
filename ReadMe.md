@@ -11,25 +11,31 @@ Its features include:
 - Control the probability of the occurrence of each element
 - Connect with DataBase
 
-Conceptions:
+## Conceptions:
+
 elements: price and volume, e.g. close, open, low, high, volume e.g.
+
 operators: math operators, e.g. add(), std();
+
 expression: short for 'expr' means 'var(close, 10)'
+
 layer: nesting levels, e.g. layer of 'var(close, 10)' is 1; layer of 'delay(var(clpse, 10), 1)' is 2;
 
-Files:
+## Files:
+
 operators_blacklist.yaml: block the occurrence of specific elements;
+
 prob_control.yaml: the probability the occurrence of each element;
 
-Examples:
-```
+## Examples:
+```python
 import os
 os.path.join('/your_path/')
 from lib import expr_generator
 eg = expr_generator.ExprGenerator()
 eg.get_one_expr(layer_num=1)
 ```
-```
+```python
 [ExprGenerator] layer:1 expr:ts_min(Volume,60)
 {'expr': 'ts_min(Volume,60)',
  'layer': 1,
