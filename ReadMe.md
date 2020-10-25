@@ -27,6 +27,31 @@ operators_blacklist.yaml: block the occurrence of specific elements;
 
 prob_control.yaml: the probability the occurrence of each element;
 
+## Operators
+
+One or multiple operators are assembled with input dataset. Blow are some of operators that can be selected.
+
+| function                                           | description                                                  |
+| -------------------------------------------------- | ------------------------------------------------------------ |
+| +, -, *, /                                         | simple math operators                                        |
+| abs, sqrt, square, exp, log, signed power, sigmoid | element operators                                            |
+| where(cond, x, y)                                  | if cond is True，return x, else return y, e.g.：where(a > b, c, d) |
+| ts_sum(x, d)                                       | The sum of x over the last d days                            |
+| ts_product(x, d)                                   | The product of x over the last d days                        |
+| ts_min(x, d)                                       | The minimum value over the last d days                       |
+| ts_max(x, d)                                       | The maximum value over the last d days                       |
+| ts_argmax(x, d)                                    | which day does the maximum value within d days occur         |
+| ts_argmin(x, d)                                    | which day does the minimum value within d days occur         |
+| ts_rank(x, d)                                      | the percentage of the day's value ranked within d days       |
+| rank(x)                                            | the percentage ranking for the day                           |
+| delay(x, d)                                        | the value of x before d days                                 |
+| ma(x, d)                                           | the mean value over the last d days                          |
+| skewness(x, d)                                     | the skewness value over the last d days                      |
+| kurtosis(x, d)                                     | the kurtosis value over the last d days                      |
+| stddev(x, d)                                       | the stddev value over the last d days                        |
+| ...                                                | ...                                                          |
+
+
 ## Examples:
 ```python
 import os
@@ -51,7 +76,7 @@ eg.get_one_expr(layer_num=2)
 {'expr': 'stddev(delta2(VolChg,60,100),200)',
  'layer': 2,
  'create_date': '2020-10-22 14:45:37'}
- ```
+```
 
 generate more:
 ![image_01](https://github.com/goosemayor/AutoMarketFeature/blob/main/image_01.png)
